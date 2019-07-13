@@ -8,7 +8,7 @@ type Foods []models.Food
 
 // Food 1 : Created 7/13 expires 7/19
 // Food 2 : Created 7/5 expires 7/12
-var foods = Foods{
+var MockFoods = Foods{
 	{
 		UUID:       "688c0daf-2833-485c-a419-b84a152a75a6",
 		PicURL:     "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bagel-Plain-Alt.jpg",

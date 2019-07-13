@@ -6,7 +6,7 @@ import (
 
 type Users []models.User
 
-var users = Users{
+var MockUsers = Users{
 	{
 		UUID:       "f30bf3a-8591-4034-950b-d611d3a93c47",
 		Email:      "jdoe@uw.edu",
