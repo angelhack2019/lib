@@ -3,6 +3,8 @@ package models
 // User Model
 type User struct {
 	UUID        string `json:uuid`
+	FirstName	string `json:first_name`
+	LastName	string `json:last_name`
 	Email       string `json:email`
 	Password    string `json:password,omitempty`
 	SumRatings  int    `json:sum_ratings`
