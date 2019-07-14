@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func ParseRequestJSON(r *http.Request, container *interface{}) {
+func ParseRequestJSON(r *http.Request, container interface{}) {
 	err := json.NewDecoder(r.Body).Decode(container)
 
 	if err != nil {
