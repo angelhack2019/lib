@@ -5,11 +5,11 @@ import (
 	"net/http"
 )
 
-func ParseRequestJSON(r *http.Request, container interface{}) {
+func ParseRequestJSON(w http.ResponseWriter, r *http.Request, container interface{}) {
 	err := json.NewDecoder(r.Body).Decode(container)
 
 	if err != nil {
-		panic(err)
+		RespondWithError(w, http.StatusBadRequest, err.Error())
 	}
 }
 
