@@ -4,7 +4,7 @@ package models
 type User struct {
 	UUID        string `json:uuid`
 	Email       string `json:email`
-	Password    string `json:password`
+	Password    string `json:password,omitempty`
 	SumRatings  int    `json:sum_ratings`
 	NumRatings  int    `json:num_ratings`
 	Bio         string `json:bio`
