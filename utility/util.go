@@ -5,6 +5,14 @@ import (
 	"net/http"
 )
 
+func ParseRequestJSON(r *http.Request, container *interface{}) {
+	err := json.NewDecoder(r.Body).Decode(container)
+
+	if err != nil {
+		panic(err)
+	}
+}
+
 func RespondWithError(w http.ResponseWriter, code int, message string) {
 	RespondWithJSON(w, code, map[string]string{"error": message})
 }
