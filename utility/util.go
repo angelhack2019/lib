@@ -5,11 +5,11 @@ import (
 	"net/http"
 )
 
-func ParseRequestJSON(r *http.Request, container interface{}) {
+func ParseRequestJSON(w http.ResponseWriter, r *http.Request, container interface{}) {
 	err := json.NewDecoder(r.Body).Decode(container)
 
 	if err != nil {
-		panic(err)
+		RespondWithError(w, http.StatusBadRequest, err.Error())
 	}
 }
 
@@ -29,6 +29,7 @@ func RespondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	}
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	if code != http.StatusOK {
 		w.WriteHeader(code)
