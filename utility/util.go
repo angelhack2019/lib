@@ -21,6 +21,10 @@ func RespondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	}
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(code)
+
+	if code != http.StatusOK {
+		w.WriteHeader(code)
+	}
+
 	w.Write(response)
 }
