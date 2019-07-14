@@ -8,8 +8,8 @@ type Users []models.User
 
 var MockUsers = Users{
 	{
-		UUID:       "f30bf3a-8591-4034-950b-d611d3a93c47",
-		Email:      "jdoe@uw.edu",
+		UUID:       "11e7d0a4-bdce-4423-92b8-c3a3fb0d55a6",
+		Email:      "fakejdoe@uw.edu",
 		Password:   "Unencrypted",
 		SumRatings: 11,
 		NumRatings: 3,
@@ -20,8 +20,8 @@ var MockUsers = Users{
 		PicURL:     "https://f4.bcbits.com/img/a0777435656_10.jpg",
 	},
 	{
-		UUID:       "f30bf3a-8591-4034-950b-d611d3a93c47",
-		Email:      "sfields@uw.edu",
+		UUID:       "c9405078-d394-40b3-9874-accdb3ccf1c6",
+		Email:      "fakesfields@uw.edu",
 		Password:   "NotSafe",
 		SumRatings: 0,
 		NumRatings: 0,
