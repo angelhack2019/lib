@@ -10,6 +10,7 @@ type User struct {
 	Bio        string `json:bio`
 	School     string `json:school`
 	State      string `json:state`
+	City 	   string `json:city`
 	Phone      string `json:phone`
 	PicURL     string `json:pic_url`
 }
